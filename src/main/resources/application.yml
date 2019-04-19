@@ -1,0 +1,34 @@
+server:
+  port: 8051
+  max-http-header-size: 20480
+  
+spring:
+  application:
+    name: demo-CLIENT
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5 
+  client:
+    service-url:
+      defaultZone: http://eureka.hperson.com/eureka/
+feign:
+  hystrix:
+    enabled: true
+      
+#使用Feign时必须添加以下两项配置
+#ribbon:
+#  eureka:
+#    enabled: true
+
+hystrix.command.default.execution.timeout.enabled: false
+#设置feign的hystrix响应超时时间(必须)
+#hystrix:
+#  command:
+#      default:
+#        execution:
+#          isolation:
+#            thread:
+#              timeoutInMilliseconds: 5000
