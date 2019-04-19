@@ -1,13 +1,19 @@
-package com.eureka.service;
+package com.hperson.demo.service;
 
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import com.eureka.api.EurekaRibbonService;
+import com.hperson.demo.feign.FeignDemoService;
+
+
+/**
+ * @author xuchen
+ * @description 失败后返回错误信息
+ */
 
 @Component
-public class DemoServiceFallback implements EurekaRibbonService {
+public class DemoServiceFallback implements FeignDemoService {
 
 	@Override
 	public String hello(String id) {

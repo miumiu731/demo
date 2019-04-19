@@ -1,20 +1,17 @@
-package com.eureka;
+package com.hperson;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class EurekaClientTwoApplication {
+public class EurekaClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientTwoApplication.class, args);
+        SpringApplication.run(EurekaClientApplication.class, args);
     }
 }

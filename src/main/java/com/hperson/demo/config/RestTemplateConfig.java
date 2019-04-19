@@ -1,4 +1,4 @@
-package com.eureka.config;
+package com.hperson.demo.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

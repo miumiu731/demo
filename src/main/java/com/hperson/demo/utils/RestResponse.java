@@ -1,4 +1,4 @@
-package com.eureka.utils;
+package com.hperson.demo.utils;
 
 import java.util.HashMap;
 import java.util.Map;
