@@ -15,6 +15,7 @@ import com.hperson.demo.feign.FeignDemoService;
  * @description 用feign调用对方接口
  */
 @RestController
+@RequestMapping("/api")
 public class FeignController {
 	@Autowired
 	private FeignDemoService feignDemoService;
@@ -22,7 +23,6 @@ public class FeignController {
 	@RequestMapping("/list")
 	public String list(@RequestParam Map<String, Object> params) {
 		String object =  feignDemoService.mobileBillServiceQuery(params);
-		System.out.println(object);
 		return object;
 	}
 }

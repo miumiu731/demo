@@ -4,7 +4,7 @@ server:
   
 spring:
   application:
-    name: demo-CLIENT
+    name: DEMO-CLIENT
   mvc:
     throw-exception-if-no-handler-found: true
   zipkin:
@@ -28,13 +28,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka.hperson.com/eureka/
-feign:
-  hystrix:
-    enabled: true
 management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
-
+        include: prometheus,health,info
+    
       
