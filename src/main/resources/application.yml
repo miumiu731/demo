@@ -33,5 +33,13 @@ management:
     web:
       exposure:
         include: prometheus,health,info
+ribbon:
+  eureka: 
+    enable: true
+  ReadTimeout: 60000
+  
+feign: 
+  compression: 
+    request: mime-types=text/xml,application/xml,application/json 
     
       
